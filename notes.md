@@ -78,9 +78,9 @@ Visual Studio is recommended in the official document
 
 *     Java<a name=javasdk></a>
   
-      [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) is recommended, download the `rpm` file to install.
+        [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) is recommended, download the `rpm` file to install.
   
-      [Overview of JDK Installation](https://docs.oracle.com/en/java/javase/18/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
+        [Overview of JDK Installation](https://docs.oracle.com/en/java/javase/18/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
 
 ### Install from Source
 
@@ -93,38 +93,73 @@ make
 sudo make install # password required
 ```
 
-## Fast-RTPS-Gen
+## ~~Fast-RTPS-Gen~~
 
-### Prerequirement
+### ~~Prerequirement~~
 
-* Java SDK
+* ~~Java SDK~~
 
-    Installed [above](#javasdk)
+    ~~Installed [above](#javasdk)~~
 
-* [SDKMAN!](http://sdkman.io/)
+* ~~[SDKMAN!](http://sdkman.io/)~~
   
-  a tool for managing parallel versions of multiple Software Development Kits on most Unix-based systems
+  ~~a tool for managing parallel versions of multiple Software Development Kits on most Unix-based systems~~
 
 ```bash
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
 
-Check the version by 
+~~Check the version by~~ 
 
-`sdk version`
+~~`sdk version`~~
 
-something like this will appear
+~~something like this will appear~~
 
-> sdkman 5.15.0
+> ~~sdkman 5.15.0~~
 
-* Garadle
+* ~~Garadle~~
   
-  ```bash
-  sdk install gradle 7.5
-  ```
+  ~~Manually install~~
+  
+  1. ~~[Download](https://gradle.org/releases) Gradle V4.10~~
+  
+     ~~Use version of 4.10 instead, as V7.5 would have the following error.~~ 
+  
+     > ~~Could not find method compile() for arguments [file collection] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler.~~ 
+  
+     ~~Some functions used in the code have been deprecated since Gradle 4.10.~~
+  
+  2. ~~Unpack the distribution~~
+  
+     ```bash
+     sudo mkdir /opt/gradle
+     sudo unzip -d /opt/gradle gradle-7.5-bin.zip
+     ```
+  
+  3. ~~Configure system environment~~
+  
+     ```bash
+     export PATH=$PATH:/opt/gradle/gradle-4.10/bin
+     ```
+  
+  4. ~~Verify installation~~
+  
+     ~~`grade -v`~~
+  
+     > ~~#something~~
+     >
+     > ~~\------------------------------------------------------------~~
+     >
+     > ~~Gradle 4.10~~
+     >
+     > ~~\------------------------------------------------------------~~
+     >
+     > ~~#something~~
 
-### Install Fast-RTPS-Gen
+
+
+### ~~Install Fast-RTPS-Gen~~
 
 ```bash
 git clone --recursive https://github.com/eProsima/Fast-RTPS-Gen.git -b v1.0.4
@@ -132,3 +167,8 @@ cd ~/Fast-RTPS-Gen
 gradle assemble
 gradle install
 ```
+
+~~Failed on `gradle install`,  no permission on copying file to /usr/***~~
+
+
+
