@@ -1,12 +1,4 @@
-This work is based on the official website of PX4 Development Guide (v1.11.0), available at [Introduction · PX4 Developer Guide](https://dev.px4.io/v1.11_noredirect/en/)
-
-* # Versions of softwares/packages
-  
-  * QGroundControl <u>V4.2.3</u>
-  
-  * 
-
-* # Getting Started
+# Getting Started
 
 # Initial Setup
 
@@ -69,8 +61,6 @@ Visual Studio is recommended in the official document
      ![Install extensions](./assets/toolchain/vscode/prompt_install_extensions.jpg)
    
    * Or, it can be found by clicking the `Extensions` icon on the <u>left side</u>, and keying in `@recommended` in the search bar. Click the "download from cloud" icon under the search bar to install. 
-   
-   
 
 ## Fast RTPS
 
@@ -123,41 +113,39 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
   ~~Manually install~~
   
   1. ~~[Download](https://gradle.org/releases) Gradle V4.10~~
-  
+     
      ~~Use version of 4.10 instead, as V7.5 would have the following error.~~ 
-  
+     
      > ~~Could not find method compile() for arguments [file collection] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler.~~ 
-  
+     
      ~~Some functions used in the code have been deprecated since Gradle 4.10.~~
   
   2. ~~Unpack the distribution~~
-  
+     
      ```bash
      sudo mkdir /opt/gradle
      sudo unzip -d /opt/gradle gradle-7.5-bin.zip
      ```
   
   3. ~~Configure system environment~~
-  
+     
      ```bash
      export PATH=$PATH:/opt/gradle/gradle-4.10/bin
      ```
   
   4. ~~Verify installation~~
-  
+     
      ~~`grade -v`~~
-  
+     
      > ~~#something~~
-     >
+     > 
      > ~~\------------------------------------------------------------~~
-     >
+     > 
      > ~~Gradle 4.10~~
-     >
+     > 
      > ~~\------------------------------------------------------------~~
-     >
+     > 
      > ~~#something~~
-
-
 
 ### ~~Install Fast-RTPS-Gen~~
 
@@ -169,8 +157,6 @@ gradle install
 ```
 
 ~~Failed on `gradle install`,  no permission on copying file to /usr/***~~
-
-
 
 ## Additional Tools
 
@@ -197,4 +183,3 @@ Download AppImage from [GitHub releases](https://github.com/mavlink/qgroundcontr
 chmod +x ./QGroundControl.AppImage
 ./QGroundControl.AppImage # or double click the file
 ```
-
