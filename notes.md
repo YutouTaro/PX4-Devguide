@@ -2,7 +2,7 @@ This work is based on the official website of PX4 Development Guide (v1.11.0), a
 
 * # Versions of softwares/packages
   
-  * QGroundControl <u>V4.1.7</u>
+  * QGroundControl <u>V4.2.3</u>
   
   * 
 
@@ -171,4 +171,30 @@ gradle install
 ~~Failed on `gradle install`,  no permission on copying file to /usr/***~~
 
 
+
+## Additional Tools
+
+### QGroundControl(QGC) [Releases](https://github.com/mavlink/qgroundcontrol/releases)
+
+> Ubuntu
+
+* Install Dependencies
+
+```bash
+sudo usermod -a -G dialout $USER
+sudo apt-get remove modemmanager -y
+sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+sudo apt install libqt5gui5 -y
+```
+
+Logout and login to make sure the change to user permissions
+
+* Install QGC
+
+Download AppImage from [GitHub releases](https://github.com/mavlink/qgroundcontrol/releases)
+
+```bash
+chmod +x ./QGroundControl.AppImage
+./QGroundControl.AppImage # or double click the file
+```
 
